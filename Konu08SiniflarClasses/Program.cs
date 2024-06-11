@@ -57,6 +57,125 @@
             Console.WriteLine("koyEvi kapı numarası : " + koyEvi.kapiNo);
 
             Console.WriteLine();
+
+            Kullanici kullanici = new() // Burada Kullanici sınıf, kullanici ise nesnedir.
+            {
+                Adi = "Deniz",
+                Soyadi = "Çoban",
+                Email = "deniz@coban.com",
+                Id = 1,
+                KullaniciAdi = "deniz",
+                Sifre = "1234"
+            };
+
+            Kullanici mesut = new()
+            {
+                Id = 18,
+                Adi = "Mesut",
+                Soyadi = "Ilıca",
+                Email = "mesutilica@gmail.com",
+                KullaniciAdi = "mesut",
+                Sifre = "123"
+            };
+
+            Console.WriteLine("kullanici Bilgileri :\n Adı : {0} Soyadı : {1}", kullanici.Adi, kullanici.Soyadi);
+            Console.WriteLine();
+            Console.WriteLine("Kendi Kullanıcımız :\n Adı : {0} Soyadı : {1}", mesut.Adi, mesut.Soyadi);
+
+            Console.WriteLine();
+            /*
+            Console.WriteLine("Kullanıcı Adınız :");
+            var kullaniciAdi = Console.ReadLine();
+            Console.WriteLine("Şifreniz :");
+            var sifre = Console.ReadLine();
+
+            if (kullaniciAdi == kullanici.KullaniciAdi && sifre == kullanici.Sifre)
+            {
+                Console.WriteLine("Hoşgeldin : " + kullanici.Adi + " " + kullanici.Soyadi);
+            }
+            else Console.WriteLine("Giriş Başarısız!");
+
+            Console.WriteLine();
+            */
+            Araba araba = new()
+            {
+                Id = 1,
+                Marka = "Dacia",
+                Model = "Logan",
+                KasaTipi = "Sedan",
+                VitesTipi = "Manuel",
+                YakitTipi = "Dizel",
+                Renk = "Bordo"
+            };
+            Console.WriteLine("Araç Bilgisi:");
+            Console.WriteLine($"Marka : {araba.Marka} \n Model : {araba.Model} \n Renk : {araba.Renk}");
+
+            Console.WriteLine();
+
+            Araba araba2 = new()
+            {
+                Id = 2,
+                Marka = "Audi",
+                Model = "A8 Long",
+                Renk = "Siyah"
+            };
+            Console.WriteLine("2. Araç Bilgisi:");
+            Console.WriteLine($"Marka : {araba2.Marka} \n Model : {araba2.Model} \n Renk : {araba2.Renk}");
+
+            Console.WriteLine();
+
+
+            Kategori kategori = new()
+            {
+                Id = 1,
+                KategoriAdi = "Elektronik"
+            };
+            Kategori kategori2 = new()
+            {
+                Id = 2,
+                KategoriAdi = "Bilgisayar"
+            };
+            Kategori kategori3 = new()
+            {
+                Id = 3,
+                KategoriAdi = "Telefon"
+            };
+
+            Console.WriteLine("Kategori : " + kategori.KategoriAdi);
+            Console.WriteLine("Kategori 2 : " + kategori2.KategoriAdi);
+            Console.WriteLine("Kategori 3 : " + kategori3.KategoriAdi);
+
+            Console.WriteLine();
+
+            SiniftaMetotKullanimi metotKullanimi = new();
+            var sonuc = metotKullanimi.LoginKontrol("admin", "1234");
+            if (sonuc == true)
+            {
+                Console.WriteLine("Giriş Başarılı!");
+            }
+            else Console.WriteLine("Giriş Başarısız!");
+
+            Console.WriteLine();
+
         }
+    }
+    class Kullanici
+    {
+        internal int Id;
+        internal string KullaniciAdi;
+        internal string Sifre;
+        internal string Email;
+        internal string Adi;
+        internal string Soyadi;
+    }
+    class Araba
+    {
+        internal int Id;
+        internal string Marka;
+        internal string Model;
+        internal string KasaTipi;
+        internal string YakitTipi;
+        internal string VitesTipi;
+        internal string Renk;
     }
 }
