@@ -157,6 +157,38 @@
 
             Console.WriteLine();
 
+            Console.WriteLine("Statik Degisken: " + SiniftaMetotKullanimi.SinifDegiskeni); // burada static olan değişkene direk sınıfadı.değişken adı şeklinde erişebiliyoruz
+
+            Console.WriteLine("Dinamik Degisken: " + metotKullanimi.DinamikDegisken);
+
+            Console.WriteLine();
+
+            Urun urun = new()
+            {
+                Adi = "Klavye",
+                Fiyati = 249,
+                UrunAciklamasi = "RGB Işıklı",
+                Id = 1,
+                Markasi = "Logitech"
+            };
+            Urun mouse = new()
+            {
+                Adi = "Mouse",
+                Fiyati = 199,
+                UrunAciklamasi = "Kablolu",
+                Markasi = "A4 Tech"
+            };
+            Console.WriteLine("Ürün Bilgileri:");
+            Console.WriteLine($"Ürün Adı : {urun.Adi}");
+            Console.WriteLine($"Ürün Fiyatı : {urun.Fiyati}");
+            Console.WriteLine($"Ürün Ürün Açıklaması : {urun.UrunAciklamasi}");
+            Console.WriteLine();
+            Console.WriteLine("Ürün Bilgileri:");
+            Console.WriteLine($"Ürün Adı : {mouse.Adi}");
+            Console.WriteLine($"Ürün Fiyatı : {mouse.Fiyati}");
+            Console.WriteLine($"Ürün Ürün Açıklaması : {mouse.UrunAciklamasi}");
+            Console.WriteLine();
+
         }
     }
     class Kullanici

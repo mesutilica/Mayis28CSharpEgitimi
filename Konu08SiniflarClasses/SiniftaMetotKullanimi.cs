@@ -23,5 +23,17 @@
         {
             return sayi1 + sayi2;
         }
+
+        public bool MailBosmuDolumu(string mail)
+        {
+            if (!string.IsNullOrWhiteSpace(mail)) // IsNullOrWhiteSpace string metotlarından biridir kendisine gönderilen string değerin boş olup olmamasını kontrol eder
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        public static string SinifDegiskeni = "Sınıflarda metot ve değişken de kullanabiliriz";
+        public string DinamikDegisken = "Bu değişken statik değildir!";
     }
 }
