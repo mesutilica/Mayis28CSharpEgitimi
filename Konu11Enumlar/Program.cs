@@ -28,6 +28,19 @@
             byte b = (byte)Meyveler.Elma;
             byte c = (byte)Meyveler.Çilek;
             Console.WriteLine($"{Meyveler.Armut} = {a}, {Meyveler.Elma}={b}, {Meyveler.Çilek}={c}");
+
+            Ornek1(SiparisDurum: 2);
+        }
+        static void Ornek1(int SiparisDurum)
+        {
+            if (SiparisDurum == (int)SiparisDurumu.Hazırlanıyor)
+                Console.WriteLine("Siparişiniz Hazırlanıyor");
+            if (SiparisDurum == (int)SiparisDurumu.Hazırlandı)
+                Console.WriteLine("Siparişiniz Hazırlandı");
+            if (SiparisDurum == (int)SiparisDurumu.KargoBekleniyor)
+                Console.WriteLine("Siparişiniz İçin Kargo Bekleniyor");
+            if (SiparisDurum == (int)SiparisDurumu.Kargolandı)
+                Console.WriteLine("Siparişiniz Kargolandı");
         }
     }
 }
