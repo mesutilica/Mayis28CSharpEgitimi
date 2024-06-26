@@ -25,9 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konu10StringSinifi", "Konu1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konu11Enumlar", "Konu11Enumlar\Konu11Enumlar.csproj", "{D70295E0-13F1-4788-B19E-A42FD260D1B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu12KalitimInheritance", "Konu12KalitimInheritance\Konu12KalitimInheritance.csproj", "{DD08FE65-733E-46F6-B0A4-5D60C908E4E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konu12KalitimInheritance", "Konu12KalitimInheritance\Konu12KalitimInheritance.csproj", "{DD08FE65-733E-46F6-B0A4-5D60C908E4E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu13KapsullemeEncapsulation", "Konu13KapsullemeEncapsulation\Konu13KapsullemeEncapsulation.csproj", "{344C9596-0B42-48EC-B214-6CE8025D8B48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konu13KapsullemeEncapsulation", "Konu13KapsullemeEncapsulation\Konu13KapsullemeEncapsulation.csproj", "{344C9596-0B42-48EC-B214-6CE8025D8B48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu14InterfacesArayuzler", "Konu14InterfacesArayuzler\Konu14InterfacesArayuzler.csproj", "{CF0B63E7-9FD7-40CC-8BC1-1BC3CC3980E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu15AbstractClasses", "Konu15AbstractClasses\Konu15AbstractClasses.csproj", "{FBFF2EF6-8707-42A9-9D5F-C652265A9B11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{344C9596-0B42-48EC-B214-6CE8025D8B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{344C9596-0B42-48EC-B214-6CE8025D8B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{344C9596-0B42-48EC-B214-6CE8025D8B48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF0B63E7-9FD7-40CC-8BC1-1BC3CC3980E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0B63E7-9FD7-40CC-8BC1-1BC3CC3980E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0B63E7-9FD7-40CC-8BC1-1BC3CC3980E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0B63E7-9FD7-40CC-8BC1-1BC3CC3980E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBFF2EF6-8707-42A9-9D5F-C652265A9B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFF2EF6-8707-42A9-9D5F-C652265A9B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFF2EF6-8707-42A9-9D5F-C652265A9B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFF2EF6-8707-42A9-9D5F-C652265A9B11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
