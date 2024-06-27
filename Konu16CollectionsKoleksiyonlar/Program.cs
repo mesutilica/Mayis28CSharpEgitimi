@@ -1,0 +1,227 @@
+﻿using System.Collections.Specialized;
+using System.Collections;
+using System.Text;
+
+namespace Konu16CollectionsKoleksiyonlar
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Konu16CollectionsKoleksiyonlar!");
+            //Ornek1();
+            //Ornek2();
+            //Ornek3();
+            //Ornek4();
+            //Ornek5();
+            //Ornek6();
+            //Ornek7();
+            //Ornek8();
+            StringBuilderKullanimi();
+        }
+        static void Ornek1()
+        {
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(1); // arrayList e Add metoduyla veri eklenir
+            arrayList.Add(2);
+            arrayList.Add(3);
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item); // listedeki elemanları ekrana yazdır
+            }
+            Console.WriteLine("ArrayList ilk eleman : " + arrayList[0]); // listede index ini verdiğimiz elemana ulaşma
+        }
+        static void Ornek2()
+        {
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add("İstanbul"); // arrayList e Add metoduyla veri eklenir
+            arrayList.Add("Ankara"); // arrayList string veri de alabilir
+            arrayList.Add("İzmir");
+            arrayList.Add("Zonguldak");
+            arrayList.Add("Çankırı");
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item); // listedeki elemanları ekrana yazdır
+            }
+            Console.WriteLine("ArrayList ilk eleman : " + arrayList[0]); // listede index ini verdiğimiz elemana ulaşma
+            Console.WriteLine();
+            Console.WriteLine("ArrayList de sıralama yapabiliriz");
+            arrayList.Sort(); // listeyi sıralama
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item); // listedeki elemanları ekrana yazdır
+            }
+            Console.WriteLine();
+            arrayList.Reverse(); // tersten sıralama
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item); // listedeki elemanları ekrana yazdır
+            }
+        }
+        static void Ornek3()
+        {
+            int tamSayi = 18;
+            double kesirli = 18.8;
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add("Ankara");
+            arrayList.Add(tamSayi);
+            arrayList.Add(kesirli);
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+                Console.WriteLine(arrayList[i]); // arrayList in i. satırındaki eleman
+            }
+        }
+        static void Ornek4()
+        {
+            StringCollection strings = new StringCollection();
+            // strings.Add(5); StringCollection a sadece string değer eklenebilir
+            strings.Add("İstanbul");
+            strings.Add("Ankara");
+            strings.Add("Bursa");
+            Console.WriteLine("String Collection");
+            foreach (var item in strings)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        static void Ornek5()
+        {
+            StringDictionary dictionary = new StringDictionary(); // key value şeklinde veri saklayabilir
+            dictionary.Add("18", "Çankırı");
+            dictionary.Add("06", "Angara");
+            dictionary.Add("34", "İstanbul");
+            dictionary.Add("01", "Adana");
+            dictionary.Add("58", "Sivas");
+            Console.WriteLine();
+            Console.WriteLine("String Dictionary");
+            Console.WriteLine("dictionary 18: " + dictionary["18"]);
+
+            Console.WriteLine();
+            Console.WriteLine("String Dictionary Values");
+            foreach (var item in dictionary.Values)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            Console.WriteLine("String Dictionary Keys");
+            foreach (var item in dictionary.Keys)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            Console.WriteLine("String Dictionary Keys-Values");
+            foreach (var item in dictionary)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        static void Ornek6()
+        {
+            Stack stack = new Stack(); // Stack sınıfı programlamada LIFO - son giren ilk çıkar kuralıyla çalışır.
+            // stack.add(); stack de listeye add metoduyla ekleme yapılmaz
+            stack.Push("Çankırı");
+            stack.Push("Ankara");
+            stack.Push("İstanbul");
+            stack.Push("Karabük");
+            stack.Push(34);
+            stack.Push(58);
+            while (stack.Count > 0)
+            {
+                Console.WriteLine(stack.Pop()); // stack de nesneler üst üste koyulmuş gibidir verilere de üstten çekerek ulaşılır
+            }
+        }
+        static void Ornek7()
+        {
+            Queue queue = new Queue(); // Queue sınıfı programlamada FIFO - ilk giren ilk çıkar mantığıyla çalışır
+            queue.Enqueue("Lale");
+            queue.Enqueue("Gül");
+            queue.Enqueue("Zambak");
+            queue.Enqueue(18); // obje aldığı için her türlü veri kabul eder
+            while (queue.Count > 0)
+            {
+                Console.WriteLine(queue.Dequeue());
+            }
+        }
+        static void Ornek8()
+        {
+            Dictionary<string, string> dictionary = new(); // hangi veri tipinden oluşacağını bizim belirleyebildiğimiz liste sistemi
+            dictionary.Add("book", "kitap");
+            dictionary.Add("18", "Çankırı");
+            dictionary.Add("34", "İstanbul");
+            Console.WriteLine(dictionary["book"]);
+
+            Console.WriteLine();
+
+            Dictionary<int, string> dictionary2 = new();
+            dictionary2.Add(1, "kitap");
+            dictionary2.Add(18, "Çankırı");
+            dictionary2.Add(34, "İstanbul");
+
+            Console.WriteLine("dictionary2 Values");
+
+            foreach (var item in dictionary2)
+            {
+                Console.WriteLine(item.Value);
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("dictionary2 Keys");
+            foreach (var item in dictionary2)
+            {
+                Console.WriteLine(item.Key);
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("dictionary2 Key-Values");
+            foreach (var item in dictionary2)
+            {
+                Console.WriteLine(item.Key + " " + item.Value);
+            }
+        }
+        static void StringBuilderKullanimi()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(1);
+            sb.Append(8);
+            Console.WriteLine("sb: " + sb.ToString());
+
+            Console.WriteLine();
+
+            StringBuilder sb2 = new StringBuilder();
+            sb2.Append("Alp ");
+            sb2.Append("Arslan");
+            Console.WriteLine("sb2: " + sb2.ToString());
+
+            Console.WriteLine();
+
+            StringBuilder sb3 = new StringBuilder();
+            sb3.Append("Alp");
+            sb3.Append(Environment.NewLine);
+            //Alt satıra geçer. \n aynı işi görmektedir.
+            sb3.Append("Arslan");
+            Console.WriteLine("sb3: " + sb3.ToString());
+
+            Console.WriteLine();
+
+            StringBuilder sb4 = new StringBuilder();
+            sb4.AppendLine("Alp"); //satıra ekler
+            sb4.Append("Arslan");
+            Console.WriteLine("sb4: " + sb4.ToString());
+        }
+        static void ListKullanimi()
+        {
+            List<string> sehirler = new(); // string veri tipi alabilen bir liste
+            sehirler.Add("Ankara");
+            sehirler.Add("İstanbul");
+            sehirler.Add("Kocaeli");
+            Console.WriteLine("Şehirler : ");
+        }
+    }
+}
