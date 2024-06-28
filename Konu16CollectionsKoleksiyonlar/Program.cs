@@ -17,7 +17,8 @@ namespace Konu16CollectionsKoleksiyonlar
             //Ornek6();
             //Ornek7();
             //Ornek8();
-            StringBuilderKullanimi();
+            //StringBuilderKullanimi();
+            ListKullanimi();
         }
         static void Ornek1()
         {
@@ -222,6 +223,84 @@ namespace Konu16CollectionsKoleksiyonlar
             sehirler.Add("İstanbul");
             sehirler.Add("Kocaeli");
             Console.WriteLine("Şehirler : ");
+            foreach (var item in sehirler)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            List<User> users = new();
+            users.Add(new User
+            {
+                Id = 1,
+                Name = "Gül",
+                Password = "123"
+            });
+            users.Add(new User
+            {
+                Id = 2,
+                Name = "Deniz",
+                Password = "456"
+            });
+            Console.WriteLine("Kullanıcılar(users) : ");
+            foreach (var item in users)
+            {
+                Console.WriteLine(item.Name);
+            }
+            List<User> kullanicilar = new()
+            {
+                new User
+                {
+                    Id = 3,
+                    Name = "İrem",
+                    Password = "123"
+                },
+                new User
+                {
+                    Id = 4,
+                    Name = "Safa",
+                    Password = "456"
+                }
+            };
+            Console.WriteLine();
+            Console.WriteLine("Kullanıcılar(kullanicilar) : ");
+            foreach (var item in kullanicilar)
+            {
+                Console.WriteLine(item.Name);
+            }
+            Console.WriteLine();
+            kullanicilar.AddRange(users); // kullanicilar listesine çoklu ekleme için AddRange metodu kullanılır.
+            Console.WriteLine("Kullanıcılar(kullanicilar) : ");
+            foreach (var item in kullanicilar)
+            {
+                Console.WriteLine(item.Name);
+            }
+            var yeniKullanici = new User()
+            {
+                Name = "Alp",
+                Password = "789"
+            };
+            Console.WriteLine("kullanicilar listesinde yeniKullanici var mı? " + kullanicilar.Contains(yeniKullanici));
+            kullanicilar.Add(yeniKullanici); // kullanicilar a yeniKullanici yı ekle
+            foreach (var item in kullanicilar)
+            {
+                Console.WriteLine(item.Name);
+            }
+            Console.WriteLine();
+            Console.WriteLine("kullanicilar listesinde yeniKullanici var mı? " + kullanicilar.Contains(yeniKullanici));
+            Console.WriteLine();
+            Console.WriteLine("Listedeki kayıt sayısı : " + kullanicilar.Count);
+            Console.WriteLine();
+            kullanicilar.Insert(1, yeniKullanici);
+            foreach (var item in kullanicilar)
+            {
+                Console.WriteLine(item.Name);
+            }
         }
+    }
+    class User
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
     }
 }
