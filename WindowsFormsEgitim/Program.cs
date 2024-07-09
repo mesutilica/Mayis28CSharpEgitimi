@@ -13,7 +13,7 @@ namespace WindowsFormsEgitim
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form5()); // start veya play e basınca açılacak olan form.
+            Application.Run(new Form8()); // start veya play e basınca açılacak olan form.
         }
     }
 }
