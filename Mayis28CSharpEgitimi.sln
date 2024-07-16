@@ -35,13 +35,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konu15AbstractClasses", "Ko
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konu16CollectionsKoleksiyonlar", "Konu16CollectionsKoleksiyonlar\Konu16CollectionsKoleksiyonlar.csproj", "{B75F494E-2F38-431B-88DD-74870E53D7BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu17HataYonetimi", "Konu17HataYonetimi\Konu17HataYonetimi.csproj", "{A694A8B0-6C2E-444A-A882-20E9ADFEDA63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konu17HataYonetimi", "Konu17HataYonetimi\Konu17HataYonetimi.csproj", "{A694A8B0-6C2E-444A-A882-20E9ADFEDA63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDPrensipleri", "SOLIDPrensipleri\SOLIDPrensipleri.csproj", "{DD760C1F-4778-45E6-AFC0-EAAE26776CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLIDPrensipleri", "SOLIDPrensipleri\SOLIDPrensipleri.csproj", "{DD760C1F-4778-45E6-AFC0-EAAE26776CF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{A1509179-A80C-4AA7-9035-A9811D1C5A52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{A1509179-A80C-4AA7-9035-A9811D1C5A52}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsEgitim", "WindowsFormsEgitim\WindowsFormsEgitim.csproj", "{B2AB326A-5270-47F4-A8BE-D730069DF243}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppAdoNet", "WindowsFormsAppAdoNet\WindowsFormsAppAdoNet.csproj", "{3A21EFC6-D136-4844-BAE5-AE0A0816AC9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{B2AB326A-5270-47F4-A8BE-D730069DF243}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2AB326A-5270-47F4-A8BE-D730069DF243}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2AB326A-5270-47F4-A8BE-D730069DF243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A21EFC6-D136-4844-BAE5-AE0A0816AC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A21EFC6-D136-4844-BAE5-AE0A0816AC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A21EFC6-D136-4844-BAE5-AE0A0816AC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A21EFC6-D136-4844-BAE5-AE0A0816AC9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
