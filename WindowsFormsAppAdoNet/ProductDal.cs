@@ -65,8 +65,9 @@ namespace WindowsFormsAppAdoNet
             komut.Dispose();
             return dataTable;//kayıtların yüklendiği data tabloyu geriye döndürdük
         }
-        public void Add(Product product)
+        public int Add(Product product)
         {
+            int islemSonucu = 0;
             ConnectionKontrol();
             SqlCommand command = new SqlCommand(
                 "Insert into Products values(@UrunAdi,@UrunFiyati,@StokMiktari,@Durum)", _connection);
@@ -74,9 +75,56 @@ namespace WindowsFormsAppAdoNet
             command.Parameters.AddWithValue("@UrunFiyati", product.UrunFiyati);
             command.Parameters.AddWithValue("@StokMiktari", product.StokMiktari);
             command.Parameters.AddWithValue("@Durum", product.Durum);
-            command.ExecuteNonQuery();
+            islemSonucu = command.ExecuteNonQuery(); // ExecuteNonQuery metodu bize sql de etkilenen kayıt sayısını döner
             command.Dispose();
             _connection.Close();
+            return islemSonucu;
+        }
+        public Product Get(int id)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Select top(1) * from Products where Id=@id", _connection);
+            command.Parameters.AddWithValue("@id", id);
+            SqlDataReader reader = command.ExecuteReader();
+            Product product = new Product();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    product.Id = Convert.ToInt32(reader["Id"]);
+                    product.UrunAdi = reader["UrunAdi"].ToString();
+                    product.StokMiktari = Convert.ToInt32(reader["StokMiktari"]);
+                    product.UrunFiyati = Convert.ToDecimal(reader["UrunFiyati"]);
+                    product.Durum = Convert.ToBoolean(reader["Durum"]);
+                }
+            }
+            else product = null;
+            reader.Close();
+            _connection.Close();
+            return product;
+        }
+        public int Update(Product product)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand(
+                "Update Products set UrunAdi=@UAdi, UrunFiyati=@UrunFiyati, StokMiktari=@StokMiktari, Durum=@Durum where Id=@id", _connection);
+            command.Parameters.AddWithValue("@UAdi", product.UrunAdi);
+            command.Parameters.AddWithValue("@UrunFiyati", Convert.ToDecimal(product.UrunFiyati));
+            command.Parameters.AddWithValue("@StokMiktari", product.StokMiktari);
+            command.Parameters.AddWithValue("@Durum", product.Durum);
+            command.Parameters.AddWithValue("@id", product.Id);
+            int sonuc = command.ExecuteNonQuery();
+            _connection.Close();
+            return sonuc;
+        }
+        public int Delete(int id)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Delete from Products where Id=@id", _connection);
+            command.Parameters.AddWithValue("@id", id);
+            int sonuc = command.ExecuteNonQuery();
+            _connection.Close();
+            return sonuc;
         }
     }
 }
