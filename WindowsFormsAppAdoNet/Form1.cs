@@ -36,6 +36,8 @@ namespace WindowsFormsAppAdoNet
             TxtUrunAdi.Text = "";
             TxtUrunFiyati.Text = "";
             cbDurum.Checked = false;
+            BtnGuncelle.Enabled = false;
+            BtnSil.Enabled = false;
         }
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
@@ -88,6 +90,8 @@ namespace WindowsFormsAppAdoNet
                 TxtStokMiktari.Text = urun.StokMiktari.ToString();
                 cbDurum.Checked = urun.Durum;
             }
+            BtnGuncelle.Enabled = true;
+            BtnSil.Enabled = true;
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -126,7 +130,19 @@ namespace WindowsFormsAppAdoNet
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (MessageBox.Show("Silmek İstediğinize Emin Misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    productDal.Delete(Convert.ToInt32(DGVUrunListesi.CurrentRow.Cells[0].Value));
+                    KayitListele();
+                    MessageBox.Show("Ürün Başarıyla Silindi");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hata Oluştu!");
+            }
         }
     }
 }

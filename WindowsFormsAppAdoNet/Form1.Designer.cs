@@ -32,6 +32,8 @@
             this.txtAra = new System.Windows.Forms.TextBox();
             this.DGVUrunListesi = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnSil = new System.Windows.Forms.Button();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
             this.cbDurum = new System.Windows.Forms.CheckBox();
             this.BtnKaydet = new System.Windows.Forms.Button();
             this.TxtStokMiktari = new System.Windows.Forms.TextBox();
@@ -41,8 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtUrunAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnGuncelle = new System.Windows.Forms.Button();
-            this.BtnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUrunListesi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +93,28 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
+            // 
+            // BtnSil
+            // 
+            this.BtnSil.Enabled = false;
+            this.BtnSil.Location = new System.Drawing.Point(168, 169);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(75, 23);
+            this.BtnSil.TabIndex = 13;
+            this.BtnSil.Text = "Sil";
+            this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
+            // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.Enabled = false;
+            this.BtnGuncelle.Location = new System.Drawing.Point(87, 169);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuncelle.TabIndex = 12;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // cbDurum
             // 
@@ -171,26 +193,6 @@
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ürün Adı";
-            // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(87, 169);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(75, 23);
-            this.BtnGuncelle.TabIndex = 12;
-            this.BtnGuncelle.Text = "Güncelle";
-            this.BtnGuncelle.UseVisualStyleBackColor = true;
-            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
-            // 
-            // BtnSil
-            // 
-            this.BtnSil.Location = new System.Drawing.Point(168, 169);
-            this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(75, 23);
-            this.BtnSil.TabIndex = 13;
-            this.BtnSil.Text = "Sil";
-            this.BtnSil.UseVisualStyleBackColor = true;
-            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // Form1
             // 

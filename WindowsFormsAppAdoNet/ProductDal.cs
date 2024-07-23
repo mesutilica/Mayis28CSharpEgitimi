@@ -6,7 +6,7 @@ using System.Data.SqlClient; // ado.net kütüphanesi
 
 namespace WindowsFormsAppAdoNet
 {
-    internal class ProductDal
+    public class ProductDal
     {
         SqlConnection _connection = new SqlConnection(@"server=(LocalDB)\MSSQLLocalDB; database=UrunYonetimiAdoNet; Integrated security=True"); // sql server veritabanına bağlantı kurmayı sağlayan nesnemiz
         private void ConnectionKontrol()//Veritabanı bağlantısının açık olup olmadığını kontrol eden metot
@@ -123,6 +123,7 @@ namespace WindowsFormsAppAdoNet
             SqlCommand command = new SqlCommand("Delete from Products where Id=@id", _connection);
             command.Parameters.AddWithValue("@id", id);
             int sonuc = command.ExecuteNonQuery();
+            command.Dispose();
             _connection.Close();
             return sonuc;
         }
