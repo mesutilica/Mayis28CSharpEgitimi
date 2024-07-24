@@ -47,6 +47,7 @@
             this.DGVKategoriler.Name = "DGVKategoriler";
             this.DGVKategoriler.Size = new System.Drawing.Size(473, 403);
             this.DGVKategoriler.TabIndex = 2;
+            this.DGVKategoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVKategoriler_CellClick);
             // 
             // label1
             // 
@@ -101,6 +102,7 @@
             this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -110,6 +112,7 @@
             this.btnSil.TabIndex = 9;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // KategoriYonetimi
             // 
