@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsAppEFCodeFirst.Entities
 {
-    internal class Product
+    public class Product
     {
         public int Id { get; set; }
         public string UrunAdi { get; set; }

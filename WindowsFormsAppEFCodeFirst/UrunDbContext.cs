@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity; //entity framework kütüphanesi
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity; //entity framework kütüphanesi
 
 namespace WindowsFormsAppEFCodeFirst
 {
     internal class UrunDbContext : DbContext //UrunDbContext bizim veritabanı yönetim contextimiz, DbContext ise entity framework ün 
     {
         public DbSet<Entities.Product> Products { get; set; }//Entity framework de Veritabanı tablolarımızı programımızla eşleştiren kısım. Products sql server veritabanındaki Products tablosuna karşılık gelir.
+        public DbSet<Entities.Category> Categories { get; set; }
         /*
          * Projede Entity framework kullanmak için yapılacaklar;
          * Projeye sağ tıklayıp açılan menüden Nuget yazana tıklayıp paket yönetci ekranını açıyoruz
