@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsAppEFCodeFirst.Entities;
 
@@ -17,7 +11,7 @@ namespace WindowsFormsAppEFCodeFirst
         {
             InitializeComponent();
         }
-        UrunDbContext context = new UrunDbContext();
+        UrunDbContext context = new UrunDbContext(); // Kategori veritabanı CRUD(ekle-güncelle-sil-listele) işlemlerini yapabilmek için context nesnesi oluşturduk
         private void KategoriYonetimi_Load(object sender, EventArgs e)
         {
             Yukle();
@@ -37,20 +31,20 @@ namespace WindowsFormsAppEFCodeFirst
             if (string.IsNullOrWhiteSpace(txtKategoriAdi.Text))
             {
                 MessageBox.Show("Kategori Adı Boş Geçilemez!");
-                return;
+                return; // eğer kategori adı boşsa geri dön aşağıdaki kodları çalıştırma
             }
             try
             {
-                var kategori = new Category()
+                Category kategori = new Category()
                 {
                     Durum = cbDurum.Checked,
                     KategoriAdi = txtKategoriAdi.Text
                 };
-                context.Categories.Add(kategori);
-                var sonuc = context.SaveChanges();
-                if (sonuc > 0)
+                context.Categories.Add(kategori); // context üzerindeki Categories tablosuna üstteki kategoriyi ekle
+                var sonuc = context.SaveChanges(); // eklenen kategoriyi veritabanına kaydet
+                if (sonuc > 0) // eğer kayıt veritabanına işlenmişse
                 {
-                    Yukle();
+                    Yukle(); // ekrandaki verileri yeniden yükle
                     MessageBox.Show("Kayıt Başarılı!");
                 }
             }
@@ -60,7 +54,7 @@ namespace WindowsFormsAppEFCodeFirst
             }
         }
 
-        private void DGVKategoriler_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DGVKategoriler_CellClick(object sender, DataGridViewCellEventArgs e)// DGVKategoriler ekrandaki data grid view
         {
             txtKategoriAdi.Text = DGVKategoriler.CurrentRow.Cells[1].Value.ToString();
             cbDurum.Checked = Convert.ToBoolean(DGVKategoriler.CurrentRow.Cells[2].Value);
@@ -78,18 +72,35 @@ namespace WindowsFormsAppEFCodeFirst
             }
             try
             {
-                var kategori = new Category()
-                {
-                    Id = Convert.ToInt32(DGVKategoriler.CurrentRow.Cells[0].Value),
-                    Durum = cbDurum.Checked,
-                    KategoriAdi = txtKategoriAdi.Text
-                };
-                var kategori2 = context.Categories.Find(kategori.Id);
-                var sonuc = context.SaveChanges();
+                int id = Convert.ToInt32(DGVKategoriler.CurrentRow.Cells[0].Value);
+                var kategori = context.Categories.Find(id); // veritabanındaki kategorilerden güncellenecek olanı id sine göre bul
+                kategori.Durum = cbDurum.Checked; // bulduğun kategorinin değerlerini ekrandan gelenle değiştir
+                kategori.KategoriAdi = txtKategoriAdi.Text;
+                var sonuc = context.SaveChanges(); // değişiklikleri veritabanına kaydet
                 if (sonuc > 0)
                 {
                     Yukle();
                     MessageBox.Show("Kayıt Başarılı!");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hata Oluştu!");
+            }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(DGVKategoriler.CurrentRow.Cells[0].Value);
+                var kategori = context.Categories.Find(id);
+                context.Categories.Remove(kategori);
+                var sonuc = context.SaveChanges(); // değişiklikleri veritabanına kaydet
+                if (sonuc > 0)
+                {
+                    Yukle();
+                    MessageBox.Show("Kayıt Silindi!");
                 }
             }
             catch (Exception)
