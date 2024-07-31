@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Temel Html Elementleri</title>
+</head>
+<body>
+    Temel Html Elementleri
+    <br />
+    * Başlık Elementleri :
+    <h1>H1 En Büyük Başlık İçin</h1>
+    <h2>H2 Alt Başlık İçin</h2>
+    <h3>H3 Orta başlık</h3>
+    <h4>H4 başlık</h4>
+    <h5>H5 başlık</h5>
+    <h6>H6 En küçük başlık</h6>
+    <p>
+        p elementi sayfada paragraf yazıları oluşturmak için kullanılır
+    </p>
+    <div>
+        div elementi sayfada bölümler oluşturmak için kullanılır
+    </div>
+    <div>
+        her div ve p elementi yeni bir satırda gösterilir
+    </div>
+    <hr />
+    <div>
+        sayfada bölümler arasına çizgi çekmek için hr elementi kullanılır
+    </div>
+    <h3>
+        a Elementi ile sayfalar arasında bağlantı verme
+    </h3>
+    <a href="anasayfa.html">Anasayfa</a>
+    <a href="hakkimizda.html" title="Hakkımızda sayfasına git">Hakkımızda</a>
+    <a href="https://www.google.com.tr/?hl=tr">Google a git</a>
+    <a href="https://www.google.com.tr/?hl=tr" target="_blank">Google a yeni sekmede git</a>
+    <a href="mailto:info@google.com.tr" title="Bize mail gönderin">email gönder</a>
+    <p>
+        Bir sayfadan başka bir sayfaya ulaşmak için a elementi kullanılır, href attribute üne verilecek değere uygulamayı ulaştırır
+        <hr />
+        olmayan bir sayfaya bağlantı verilirse 404 not found hatası döner
+    </p>
+    <a href="/olmayansayfa.html">Olmayan sayfa</a>
+
+
+    <h3>Sayfada Resim Gösterme</h3>
+    <p>
+        Sayfalarımızda resim göstermek için html de img tagı kullanılır. Src kısmına resmin bulunduğu konum verilir.
+    </p>
+    img tab a basarsak resim elementi oluşur <img src="#" alt="Alternate Text" />
+    <img src="https://www.google.com.tr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Alternatif metin" />
+    <img src="/Images/resim1.jpg" width="218" />
+    <img src="/Images/resim2.jpg" height="218" />
+    <img src="/Images/resim3.jpg" width="218" height="218" />
+    <img src="../Images/googlelogo.png" />
+
+
+    <p>
+        Resimlere boyut vermek için img koduna width ve height özellikleri eklenir.
+    </p>
+    <h4>Resimlere link verme</h4>
+    <a href="hakkimizda.html">
+        <img src="/Images/resim1.jpg" width="118" title="Hakkımızda sayfasına git" />
+    </a>
+</body>
+</html>

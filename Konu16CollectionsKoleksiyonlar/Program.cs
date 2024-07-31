@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Konu16CollectionsKoleksiyonlar
 {
+    // Koleksiyonlar dizilerin gelişmiş halleridir. Hem farklı veri tiplerinde liste yapabilmemizi, hem de aynı tipten listeler yapıp bu listelerde ekleme çıkarma işlemlerini yapabilmemizi sağlar.
     internal class Program
     {
         static void Main(string[] args)
