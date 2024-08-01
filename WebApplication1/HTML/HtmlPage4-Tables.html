@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Tables - Tablolar</title>
+</head>
+<body>
+    <h1>HTML Tables - Tablolar</h1>
+    <p>
+        Sayfa tasarımı, veri listeleme gibi işlemlerde kullanılır.
+    </p>
+    <h2>
+        Sayfada Tablo İle Tasarım Yapma (table yazıp tab a basarak oluşturuyoruz)
+    </h2>
+
+    <table>
+        <tr>
+            <td>1 satır (tr) ve 1 sütunluk (td) tablo</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <td>1. satırın 1. sütunu</td>
+            <td>1. satırın 2. sütunu</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table border="1">
+        <tr>
+            <td>1. satırın 1. sütunu</td>
+            <td>1. satırın 2. sütunu</td>
+        </tr>
+        <tr>
+            <td>2. satırın 1. sütunu</td>
+            <td>2. satırın 2. sütunu</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table border="1">
+        <tr>
+            <td>1. satırın 1. sütunu</td>
+            <td>1. satırın 2. sütunu</td>
+            <td>1. satırın 3. sütunu</td>
+        </tr>
+        <tr>
+            <td>2. satırın 1. sütunu</td>
+            <td>2. satırın 2. sütunu</td>
+            <td>2. satırın 3. sütunu</td>
+        </tr>
+        <tr>
+            <td>3. satırın 1. sütunu</td>
+            <td>3. satırın 2. sütunu</td>
+            <td>3. satırın 3. sütunu</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table>
+        <tr>
+            <td>
+                <a href="anasayfa.html">Anasayfa</a>
+            </td>
+            <td>
+                <a href="hakkimizda.html">Hakkımızda</a>
+            </td>
+            <td>
+                <a href="#">İletişim</a>
+            </td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table border="1">
+        <tr>
+            <td>Kategori No</td>
+            <td>Kategori Adı</td>
+            <td>Durumu</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Elektronik</td>
+            <td>Aktif</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bilgisayar</td>
+            <td>Aktif</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Telefon</td>
+            <td>Aktif</td>
+        </tr>
+    </table>
+
+    <h3>
+        Tablolarda Satır ve Sütunları Birleştirme
+    </h3>
+
+    <table border="1" width="444">
+        <caption>
+            <h3>caption ile tablo içinde başlık yazabiliriz</h3>
+        </caption>
+        <tr>
+            <td rowspan="3">
+                Ürün Bilgileri :
+            </td>
+        </tr>
+        <tr>
+            <td>Ürün Adı</td>
+            <td>Dell Laptop</td>
+        </tr>
+        <tr>
+            <th rowspan="3">
+                rowspan attribute üne kaç satır yükseklik vermek istersek o değeri veriyoruz
+            </th>
+            <td>
+                <img src="/Images/resim2.jpg" alt="Alternate Text" height="118" />
+            </td>
+        </tr>
+    </table>
+
+    <h3>
+        Colspan ile Sütunları Birleştirme
+    </h3>
+
+    <table border="1" width="555">
+        <tr>
+            <th>Ürün Adı</th>
+            <td>
+                Klavye
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                bu td colspan="2" özelliği tanımlanarak yan yana 2 kolonluk yer kaplaması sağlandı
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1 satırda tek td kalırsa
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

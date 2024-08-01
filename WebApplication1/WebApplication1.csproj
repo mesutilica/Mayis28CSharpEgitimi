@@ -93,6 +93,12 @@
     <Content Include="HTML\hakkimizda.html" />
     <Content Include="HTML\HtmlPage1.html" />
     <Content Include="HTML\HtmlPage2-Temel-Html-Elementleri.html" />
+    <Content Include="HTML\HtmlPage3-Bicimlendirme-Elementleri.html" />
+    <Content Include="HTML\HtmlPage4-Tables.html" />
+    <Content Include="HTML\HtmlPage5-Lists.html" />
+    <Content Include="HTML\HtmlPage6-Semantic-Elements.html" />
+    <Content Include="HTML\HtmlPage7-Forms.html" />
+    <Content Include="HTML\search.html" />
     <Content Include="Images\banner-image.png" />
     <Content Include="Images\resim1.jpg" />
     <Content Include="Images\resim2.jpg" />
